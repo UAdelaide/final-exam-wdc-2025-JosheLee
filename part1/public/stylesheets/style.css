@@ -13,6 +13,7 @@ body {
 }
 
 button {
+  font-family: "Courier New", monospace;
   background-color: #e0e0e0;
   color: black;
   border: none;
