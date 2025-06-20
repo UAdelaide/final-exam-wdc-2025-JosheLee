@@ -10,7 +10,7 @@ router.get('/', function (req, res, next) {
 // Return a list of all dogs with their size and owner's username
 router.get('/api/dogs', async (req, res) => {
   try {
-    const [rows] = await pool.query(`
+    const [rows] = await db.query(`
       SELECT
         d.name      AS dog_name,
         d.size      AS size,
