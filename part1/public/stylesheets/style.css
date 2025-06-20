@@ -22,7 +22,7 @@ button:focus {
   outline: 2px solid #000000e3;
 }
 
-#dogOfTheDayImage {
+#daily_dog {
   display: block;
   max-width: 90%;
   height: auto;
