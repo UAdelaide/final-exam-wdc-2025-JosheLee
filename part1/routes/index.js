@@ -3,12 +3,12 @@ var router = express.Router();
 var db = require('../db');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', function (req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
 // Return a list of all dogs with their size and owner's username
-router.get('/dogs', async (req, res) => {
+router.get('/api/dogs', async (req, res) => {
   try {
     const [rows] = await pool.promise().query(`
       SELECT
