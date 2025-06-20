@@ -85,7 +85,9 @@ router.get('/dogs', async (req, res) => {
 try {
   const owner_id = req.session.user.id;
   const [rows] = await db.query(`
-    SELECT dog_id
+    SELECT dog_id, name
+    FROM Dogs
+    WHERE owner
     `)
 }
 });
