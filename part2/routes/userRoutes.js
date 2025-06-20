@@ -82,19 +82,19 @@ router.post('/logout', function (req, res) {
 
 // GET get owner's dogs
 router.get('/dogs', async (req, res) => {
-try {
-  const owner_id = req.session.user.id;
-  const [rows] = await db.query(`
+  try {
+    const owner_id = req.session.user.id;
+    const [rows] = await db.query(`
     SELECT dog_id, name
     FROM Dogs
     WHERE owner_id = ?`,
-  [owner_id]
-);
-res.json(rows);
-} catch (err) {
-  console.error(err);
-  res.status(500).json({})
-}
+      [owner_id]
+    );
+    res.json(rows);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'couldnt load dogs' });
+  }
 });
 
 module.exports = router;
