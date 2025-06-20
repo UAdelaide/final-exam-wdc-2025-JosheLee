@@ -29,7 +29,8 @@
             methods: {
                 load_dog(){
                     fetch('https://dog.ceo/api/breeds/image/random')
-                    .then((res))
+                    .then((res)) => res.json())
+                    .then((data))
                 }
             }
         }).mount('#app');
