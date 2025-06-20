@@ -16,6 +16,9 @@
         <div class="dog-container">
             <img v-bind:src="daily_dog" src="" alt="this is dog" id="daily_dog">
             <div class="bigspace"></div>
+            <button type="button" onclick="document.getElementById('real-button').style.display = 'inline-block'">
+                Show Reload Button
+            </button>
             <button type="button" v-on:click="load_dog">{{ button }}</button>
         </div>
     </div>
