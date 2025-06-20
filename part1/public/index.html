@@ -30,10 +30,10 @@
                 load_dog(){
                     fetch('https://dog.ceo/api/breeds/image/random')
                     .then((res) => res.json())
-                    .then((data)) => {
+                    .then((data) => {
                         this.daily_dog = data.message;
                     })
-                    .catch((err)) => {
+                    .catch((err) => {
                         console.error('error loading dog img', err);
                     });
                 }
