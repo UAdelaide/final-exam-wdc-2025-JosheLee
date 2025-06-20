@@ -16,15 +16,16 @@ app.use(cookieParser());
 
 (async () => {
     try {
-        // Connect to MySQL without specifying a database
+        // connect to MySQL without specifying a database
         const connection = await mysql.createConnection({
             host: 'localhost'
         });
 
-        // Create the database if it doesn't exist
+        // create the database if it doesn't exist
         await connection.query('CREATE DATABASE IF NOT EXISTS DogWalkService');
         await connection.end();
 
+        // create tables if they dont exist
         
 })();
 
