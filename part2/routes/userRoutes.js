@@ -80,6 +80,7 @@ router.post('/logout', function (req, res) {
   });
 });
 
-// GET 
+// GET get owner's dogs
+router.get('/dogs')
 
 module.exports = router;
