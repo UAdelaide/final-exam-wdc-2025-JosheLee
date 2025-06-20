@@ -133,10 +133,12 @@
         }
 
         onMounted(() => {
+          loadDogs();
           loadWalks();
         });
 
         return {
+          dogs,
           form,
           walks,
           message,
