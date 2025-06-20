@@ -33,7 +33,9 @@
                     .then((data)) => {
                         this.daily_dog = data.message;
                     })
-                    .catch((err))
+                    .catch((err)) => {
+                        console.error('error loading dog img', err)
+                    }
                 }
             }
         }).mount('#app');
