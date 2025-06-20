@@ -87,8 +87,8 @@ try {
   const [rows] = await db.query(`
     SELECT dog_id, name
     FROM Dogs
-    WHERE owner
-    `)
+    WHERE owner_id = ?`,
+  )
 }
 });
 
