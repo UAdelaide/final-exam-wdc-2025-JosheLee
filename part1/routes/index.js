@@ -28,6 +28,10 @@ router.get('/api/dogs', async (req, res) => {
 
 // Return all open walk requests
 // including the dog name, requested time, location, and owner's username
-router.get('/api/walkrequests/open')
+router.get('/api/walkrequests/open', async (req, res) => {
+  try {
+    
+  }
+});
 
 module.exports = router;
