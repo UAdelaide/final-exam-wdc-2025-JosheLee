@@ -51,11 +51,11 @@ router.get('/api/walkrequests/open', async (req, res) => {
 });
 
 router.get('/api/walkers/summary', async (req, res) => {
-try {
+  try {
 
-} catch (err) {
-  return res.status
-}
+  } catch (err) {
+    return res.status(500).json({ error: 'Database error' });
+  }
 });
 
 module.exports = router;
