@@ -15,7 +15,7 @@
     <h1 class="mb-4 text-primary">{{ message }}</h1>
     <p class="lead">Connect with trusted walkers for your beloved dog!</p>
 
-    <form id="loginForm" class="mt-4" method="get">
+    <form id="loginForm" class="mt-4" method="get" onsubmit="login(event)">
       <div class="mb-3">
         <label for="username" class="form-label">Username</label>
         <input id="username" name="username" type="text" class="form-control" placeholder="username" required
@@ -27,7 +27,7 @@
         <input id="password" name="password" type="password" class="form-control" placeholder="password" required />
       </div>
 
-      <button type="button" class="btn btn-primary" onclick="login()">Log In</button>
+      <button type="button" class="btn btn-primary">Log In</button>
     </form>
 
   </div>
