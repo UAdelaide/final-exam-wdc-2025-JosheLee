@@ -65,4 +65,24 @@ router.post('/login', async (req, res) => {
   }
 });
 
+router.get('/logout', (req, res) => {
+  req.session.destroy(err => {
+    if (err) {
+      console.error('Session destroy error:', err);
+      // fallback to a simple text response
+      return res.status(500).send('Logout failed');
+    }
+
+    res.clearCookie('connect.sid', {
+      path: '/',
+      httpOnly: true,
+      // secure: true,
+      sameSite: 'lax'
+    });
+
+    // send them back to the login page
+    res.redirect('/login.html');
+  });
+});
+
 module.exports = router;
