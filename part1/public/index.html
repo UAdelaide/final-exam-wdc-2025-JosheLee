@@ -16,7 +16,15 @@
         <button type="button" v-on:click="">{{ button }}</button>
         <img v-bind:src="daily_dog" src="" alt="this is dog" id="daily_dog">
     </div>
-    
+    <script>
+        const { createApp } = Vue;
+        createApp({
+            data() {
+                return {
+                    message: 'Welcome to the Dog Walking Service!'
+                };
+            }
+        }).mount('#app');
+    </script>
 </body>
-
 </html>
