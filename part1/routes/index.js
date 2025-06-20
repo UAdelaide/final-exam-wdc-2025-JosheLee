@@ -30,7 +30,9 @@ router.get('/api/dogs', async (req, res) => {
 // including the dog name, requested time, location, and owner's username
 router.get('/api/walkrequests/open', async (req, res) => {
   try {
-    const [rows] = await db.query()
+    const [rows] = await db.query(`
+      SELECT 
+      `);
   } catch (err) {
     return res.status(500).json({error: 'Database error'});
   }
