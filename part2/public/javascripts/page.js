@@ -186,7 +186,7 @@ function login() {
     const userLogin = { username, password };
     const xhr = new XMLHttpRequest();
 
-    xhr.open('POST', '/login', true);
+    xhr.open('POST', '/api/users/login', true);
     xhr.setRequestHeader('Content-Type', 'application/json');
 
     xhr.onload = function () {
