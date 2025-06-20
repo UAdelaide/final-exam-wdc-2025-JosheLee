@@ -30,7 +30,7 @@ router.get('/api/dogs', async (req, res) => {
 // including the dog name, requested time, location, and owner's username
 router.get('/api/walkrequests/open', async (req, res) => {
   try {
-    const [rows]
+    const [rows] = await db.query()
   }
 });
 
