@@ -8,6 +8,22 @@ router.get('/', function(req, res, next) {
 });
 
 // Return a list of all dogs with their size and owner's username
+router.get('/dogs', async (req, res) => {
+  try {
+    const [rows] = await pool.promise().query(`
+      SELECT
+        d.name      AS dog_name,
+        d.size      AS size,
+        u.username  AS owner_username
+      FROM Dogs d
+      JOIN Users u ON d.owner_id = u.user_id
+    `);
 
+    return res.json(rows);
+  } catch (err) {
+    console.error('/api/dogs error:', err);
+    return res.status(500).json({ error: 'Database error' });
+  }
+});
 
 module.exports = router;
