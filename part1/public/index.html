@@ -34,10 +34,9 @@
                         this.daily_dog = data.message;
                     })
                     .catch((err)) => {
-                        console.error('error loading dog img', err)
-                    }
+                        console.error('error loading dog img', err);
+                    });
                 }
-            }
         }).mount('#app');
     </script>
 </body>
