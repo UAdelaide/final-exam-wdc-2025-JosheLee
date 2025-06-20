@@ -25,6 +25,7 @@ app.use(cookieParser());
         await connection.query('CREATE DATABASE IF NOT EXISTS DogWalkService');
         await connection.end();
 
+        
 })();
 
 app.use(express.static(path.join(__dirname, 'public')));
