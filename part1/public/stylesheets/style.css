@@ -1,9 +1,31 @@
+html,
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
+#app {
+  text-align: center;
+  padding: 1rem;
 }
 
+button {
+  background-color: #cccccce5;
+  border: 1px solid #999999dd;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: 2px solid #000000e3;
+}
+
+#dogOfTheDayImage {
+  display: block;
+  max-width: 90%;
+  height: auto;
+  margin: 1rem auto 0;
+  border-radius: 4px;
+}
