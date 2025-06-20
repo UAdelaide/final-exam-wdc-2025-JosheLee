@@ -71,14 +71,14 @@ app.use(cookieParser());
             (SELECT user_id    FROM Users       WHERE username='bobwalker'),
             (SELECT user_id    FROM Users       WHERE username='alice123'),
             5,
-            'Excellent, prompt service'
+            'excellent service'
           )
       `);
 
-            console.log('Seed data inserted');
+            console.log('seed data inserted');
         }
     } catch (err) {
-        console.error('Error during seeding:', err);
+        console.error('error during seeding:', err);
     }
 })();
 
