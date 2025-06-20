@@ -199,6 +199,46 @@ function login() {
     xmlhttp.setRequestHeader("Content-type", "application/json");
     xmlhttp.send(JSON.stringify(user));
 
+
+    const username = document.getElementById('login-username').value;
+    const password = document.getElementById('login-password').value;
+
+    if (!username || !password) {
+        alert('Please enter both username and password.');
+        return;
+    }
+
+    const userLogin = {
+        username,
+        password
+    };
+
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', '/api/data/login', true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+
+    xhr.onload = function () {
+        try {
+            const response = JSON.parse(xhr.responseText);
+
+            if (xhr.status === 200 && response.login) {
+                window.location.href = "profile.html";
+            } else {
+                // Optionally, still show a message if login failed
+                alert("Login failed: " + (response.error || 'Unknown error'));
+            }
+        } catch (e) {
+            console.error('Response parsing error:', e);
+            document.getElementById('login-result').textContent = "Unexpected server response";
+        }
+    };
+
+    xhr.onerror = function () {
+        alert('Network error');
+    };
+
+    xhr.send(JSON.stringify(userLogin));
+
 }
 
 function logout() {
