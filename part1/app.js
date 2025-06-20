@@ -26,7 +26,7 @@ app.use(cookieParser());
         await connection.end();
 
         // create tables if they dont exist
-        
+        await pool.query
 })();
 
 app.use(express.static(path.join(__dirname, 'public')));
