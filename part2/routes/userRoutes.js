@@ -65,6 +65,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
+// POST logout
 router.post('/logout', function (req, res) {
   req.session.destroy((err) => {
     if (err) {
@@ -78,5 +79,7 @@ router.post('/logout', function (req, res) {
     res.json({ logout: true });
   });
 });
+
+// GET 
 
 module.exports = router;
