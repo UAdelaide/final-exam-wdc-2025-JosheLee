@@ -12,6 +12,12 @@ body {
   padding: 2rem;
 }
 
+h1 {
+  font-family: "Comic Sans MS", cursive;
+  font-size: 3rem;
+  color: #222;
+}
+
 button {
   font-family: "Courier New", monospace;
   background-color: #e0e0e0;
