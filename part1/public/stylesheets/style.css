@@ -13,13 +13,13 @@ body {
 }
 
 h1 {
-  font-family: Tahoma, Geneva, sans-serif;
+  font-family: "Comic Sans MS", cursive;
   font-size: 3rem;
   color: #222;
 }
 
 button {
-  font-family: monospace;
+  font-family: Tahoma, Geneva, sans-serif;
   background-color: #e0e0e0;
   color: black;
   border: none;
