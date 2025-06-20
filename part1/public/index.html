@@ -16,7 +16,8 @@
         <div class="dog-container">
             <img v-bind:src="daily_dog" src="" alt="this is dog" id="daily_dog">
             <div class="bigspace"></div>
-            <button type="button" v-on:click="load_dog">{{ button }}</button>
+            <button @click="showConfirm = true">{{ button }}</button>
+            
         </div>
     </div>
 
