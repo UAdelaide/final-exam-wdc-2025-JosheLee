@@ -53,12 +53,12 @@ app.use(cookieParser());
         VALUES
           (
             (SELECT request_id FROM WalkRequests WHERE location='Parklands'),
-            (SELECT user_id    FROM Users       WHERE username='bobwalker'),
+            (SELECT user_id FROM Users WHERE username='bobwalker'),
             'accepted'
           ),
           (
             (SELECT request_id FROM WalkRequests WHERE location='Brighton'),
-            (SELECT user_id    FROM Users       WHERE username='ryza24'),
+            (SELECT user_id FROM Users WHERE username='ryza24'),
             'pending'
           )
       `);
