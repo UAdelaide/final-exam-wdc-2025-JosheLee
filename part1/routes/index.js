@@ -53,7 +53,15 @@ router.get('/api/walkrequests/open', async (req, res) => {
 router.get('/api/walkers/summary', async (req, res) => {
   try {
     const [rows] = await db.query(`
-      
+      SELECT
+        u.username AS walker_username,
+        COALESCE(COUNT(r.rating_id), 0) AS total_ratings,
+        AVG(r.rating) AS average_rating,
+        COALESCE(COUNT(r.rating_id), 0) AS completed_walks
+      FROM Users u
+      LEFT JOIN WalkRatings r ON u.user_id = r.walker_id
+      WHERE u.role = 'walker'
+      GROUP BY u.user_id
     `);
   } catch (err) {
     return res.status(500).json({ error: 'Database error' });
