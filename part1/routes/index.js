@@ -26,8 +26,8 @@ router.get('/api/dogs', async (req, res) => {
   }
 });
 
-// Return all open walk requests, including the dog name, requested time, location, and owner's username
-
+// Return all open walk requests
+// including the dog name, requested time, location, and owner's username
 
 
 module.exports = router;
