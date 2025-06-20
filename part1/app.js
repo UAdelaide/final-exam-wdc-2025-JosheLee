@@ -68,8 +68,8 @@ app.use(cookieParser());
         VALUES
           (
             (SELECT request_id FROM WalkRequests WHERE location='Parklands'),
-            (SELECT user_id    FROM Users       WHERE username='bobwalker'),
-            (SELECT user_id    FROM Users       WHERE username='alice123'),
+            (SELECT user_id FROM Users WHERE username='bobwalker'),
+            (SELECT user_id FROM Users WHERE username='alice123'),
             5,
             'excellent service'
           )
