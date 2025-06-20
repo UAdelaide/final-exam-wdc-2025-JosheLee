@@ -83,7 +83,8 @@ router.post('/logout', function (req, res) {
 // GET get owner's dogs
 router.get('/dogs', async (req, res) => {
 try {
-  const own
+  const owner_id = req.session.user.id;
+  
 }
 });
 
