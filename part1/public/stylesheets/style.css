@@ -58,3 +58,7 @@ button:focus {
 .dog-container button {
   margin-top: 4rem;
 }
+
+big-spacer {
+  height: 100vh;
+}
