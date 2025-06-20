@@ -189,7 +189,7 @@ function login() {
     };
 
     const xhr = new XMLHttpRequest();
-    xhr.open('POST', '/users/login', true);
+    xhr.open('POST', '/login', true);
     xhr.setRequestHeader('Content-Type', 'application/json');
 
     xhr.onload = function () {
