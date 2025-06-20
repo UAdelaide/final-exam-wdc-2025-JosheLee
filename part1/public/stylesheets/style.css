@@ -19,7 +19,7 @@ h1 {
 }
 
 button {
-  font-family: "Courier New", monospace;
+  font-family: monospace;
   background-color: #e0e0e0;
   color: black;
   border: none;
