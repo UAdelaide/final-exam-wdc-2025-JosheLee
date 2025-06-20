@@ -32,7 +32,8 @@
                     .then((res)) => res.json())
                     .then((data)) => {
                         this.daily_dog = data.message;
-                    }
+                    })
+                    .catch((err))
                 }
             }
         }).mount('#app');
