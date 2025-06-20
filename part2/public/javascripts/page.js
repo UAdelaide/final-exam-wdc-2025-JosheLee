@@ -176,7 +176,7 @@ function downvote(index) {
 
 function login() {
     const username = document.getElementById('username').value;
-    const password = document.getElementById('login-password').value;
+    const password = document.getElementById('password').value;
 
     if (!username || !password) {
         alert('Please enter both username and password.');
