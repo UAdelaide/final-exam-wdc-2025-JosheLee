@@ -65,23 +65,19 @@ router.post('/login', async (req, res) => {
   }
 });
 
-router.get('/logout', (req, res) => {
+router.post('/logout', function (req, res) {
   req.session.destroy((err) => {
     if (err) {
-      console.error('Session destroy error:', err);
-      // fallback to a simple text response
-      return res.status(500).send('Logout failed');
+      console.error("Session destroy error:", err);
+      return res.status(500).json({ logout: false, error: 'Logout failed' });
     }
-
     res.clearCookie('connect.sid', {
       path: '/',
       httpOnly: true,
-      sameSite: 'lax'
     });
-
-    // send them back to the login page
-    res.redirect('/login.html');
+    res.json({ logout: true });
   });
+});
 });
 
 module.exports = router;
