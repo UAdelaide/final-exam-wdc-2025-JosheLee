@@ -59,6 +59,6 @@ button:focus {
   margin-top: 4rem;
 }
 
-big-spacer {
-  height: 100vh;
+.bigspace {
+  height: 75vh;
 }
