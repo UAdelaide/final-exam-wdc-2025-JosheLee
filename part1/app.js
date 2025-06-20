@@ -16,9 +16,12 @@ app.use(cookieParser());
 
 (async () => {
     try {
+        // Connect to MySQL without specifying a database
         const connection = await mysql.createConnection({
             host: 'localhost'
         });
+
+        // Create the database if it doesn't exist
         
     }
 })();
