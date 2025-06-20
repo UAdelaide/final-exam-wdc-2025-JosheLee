@@ -15,8 +15,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 (async () => {
-    
-})
+    try {
+        
+    }
+})();
 
 app.use(express.static(path.join(__dirname, 'public')));
 
