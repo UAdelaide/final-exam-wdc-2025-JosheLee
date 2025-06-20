@@ -46,6 +46,7 @@ router.get('/api/walkrequests/open', async (req, res) => {
 
     return res.json(rows);
   } catch (err) {
+    console.error('/api/dogs error:', err);
     return res.status(500).json({ error: 'Database error' });
   }
 });
@@ -64,6 +65,7 @@ router.get('/api/walkers/summary', async (req, res) => {
       GROUP BY u.user_id
     `);
   } catch (err) {
+    console.error('/api/dogs error:', err);
     return res.status(500).json({ error: 'Database error' });
   }
 });
