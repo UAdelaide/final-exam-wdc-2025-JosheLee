@@ -91,6 +91,8 @@ try {
   [owner_id]
 );
 res.json(rows);
+} catch (err) {
+  console.error(err)
 }
 });
 
