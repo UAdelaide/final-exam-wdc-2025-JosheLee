@@ -183,28 +183,42 @@ function login() {
         return;
     }
 
-    const userLogin = {
-        username,
-        password
-    };
-
+    const userLogin = { username, password };
     const xhr = new XMLHttpRequest();
+
     xhr.open('POST', '/login', true);
     xhr.setRequestHeader('Content-Type', 'application/json');
 
     xhr.onload = function () {
+        let response;
         try {
-            const response = JSON.parse(xhr.responseText);
-
-            if (xhr.status === 200 && response.login) {
-                window.location.href = "profile.html";
-            } else {
-                // Optionally, still show a message if login failed
-                alert("Login failed: " + (response.error || 'Unknown error'));
-            }
+            response = JSON.parse(xhr.responseText);
         } catch (e) {
-            console.error('Response parsing error:', e);
-            document.getElementById('login-result').textContent = "Unexpected server response";
+            console.error('Invalid JSON:', e);
+            alert('Unexpected server response');
+            return;
+        }
+
+        if (xhr.status === 200) {
+            const { user } = response;
+
+            if (!user || !user.role) {
+                alert('Login succeeded but no role returned.');
+                return;
+            }
+
+            // Redirect based on role:
+            if (user.role === 'owner') {
+                window.location.href = '/owner-dashboard.html';
+            } else if (user.role === 'walker') {
+                window.location.href = '/walker-dashboard.html';
+            } else {
+                window.location.href = '/index.html';
+            }
+
+        } else {
+            // any 4xx/5xx
+            alert('Login failed: ' + (response.error || 'Unknown error'));
         }
     };
 
@@ -213,7 +227,6 @@ function login() {
     };
 
     xhr.send(JSON.stringify(userLogin));
-
 }
 
 function logout() {
