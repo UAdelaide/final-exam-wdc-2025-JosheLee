@@ -25,7 +25,7 @@
                     button: 'Reload Image',
                     daily_dog: ''
                 };
-            }
+            },
             methods: {
                 load_dog(){
                     fetch('https://dog.ceo/api/breeds/image/random')
@@ -41,7 +41,7 @@
             mounted(){
                 this.load_dog();
             }
-        }.mount('#app');
+        }).mount('#app');
     </script>
 </body>
 </html>
