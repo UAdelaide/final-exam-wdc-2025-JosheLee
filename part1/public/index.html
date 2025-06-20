@@ -16,9 +16,7 @@
         <div class="dog-container">
             <img v-bind:src="daily_dog" src="" alt="this is dog" id="daily_dog">
             <div class="bigspace"></div>
-            <button type="button" @click="showConfirm = true">{{ button }}</button>
-            <button type="button" v-if="showConfirm" @click="load_dog"> Confirm {{ button }}
-            </button>
+            <button type="button" v-on:click="load_dog">{{ button }}</button>
         </div>
     </div>
 
@@ -29,8 +27,7 @@
                 return {
                     title: 'Dog of the Day Image',
                     button: 'Want a different dog that might not be as goofy?',
-                    daily_dog: '',
-                    confirm: false
+                    daily_dog: ''
                 };
             },
             methods: {
