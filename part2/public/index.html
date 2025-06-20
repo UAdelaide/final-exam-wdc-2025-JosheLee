@@ -14,6 +14,7 @@
   <div id="app" class="container py-5">
     <h1 class="mb-4 text-primary">{{ message }}</h1>
     <p class="lead">Connect with trusted walkers for your beloved dog!</p>
+
     <form action="/users/login" method="POST" class="mt-4">
       <div class="mb-3">
         <label for="username" class="form-label">Username</label>
@@ -23,8 +24,8 @@
 
       <div class="mb-3">
         <label for="password" class="form-label">Password</label>
-        <input v-model="password" name="password" type="password" id="password" class="form-control" placeholder="••••••••"
-          required />
+        <input v-model="password" name="password" type="password" id="password" class="form-control"
+          placeholder="••••••••" required />
       </div>
 
       <button type="submit" class="btn btn-primary">Log In</button>
