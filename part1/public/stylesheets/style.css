@@ -52,11 +52,9 @@ button:focus {
 .dog-container {
   display: flex;
   flex-direction: column;
-  /* stack vertically */
   align-items: center;
 }
 
 .dog-container button {
   margin-top: 4rem;
-  /* space between image and button */
 }
