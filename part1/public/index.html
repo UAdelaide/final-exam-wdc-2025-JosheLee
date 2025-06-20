@@ -17,7 +17,7 @@
             <img v-bind:src="daily_dog" src="" alt="this is dog" id="daily_dog">
             <div class="bigspace"></div>
             <button type="button" onclick="document.getElementById('real-button').style.display = 'inline-block'">
-                Show Reload Button
+                Want a different dog that might not be as goofy?
             </button>
             <button id="real-button" type="button" style="display: none;" v-on:click="load_dog">{{ button }}</button>
         </div>
@@ -29,7 +29,7 @@
             data() {
                 return {
                     title: 'Dog of the Day Image',
-                    button: 'Want a different dog that might not be as goofy?',
+                    button: 'are you sure?',
                     daily_dog: ''
                 };
             },
