@@ -81,6 +81,6 @@ router.post('/logout', function (req, res) {
 });
 
 // GET get owner's dogs
-router.get('/dogs')
+router.get('/dogs', async (req, res) => )
 
 module.exports = router;
