@@ -105,7 +105,7 @@ router.get('/api/dogs', async (req, res) => {
         dog_id
         name
         size
-        d.owner_id
+        owner_id
       FROM Dogs
     `);
 
