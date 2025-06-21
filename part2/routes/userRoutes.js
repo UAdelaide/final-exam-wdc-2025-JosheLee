@@ -102,6 +102,7 @@ router.get('/api/dogs', async (req, res) => {
   try {
     const [rows] = await db.query(`
       SELECT
+        d.dog_id AS dog_id
         d.name AS dog_name,
         d.size AS size,
         u.username AS owner_username
