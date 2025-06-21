@@ -69,6 +69,8 @@
           if (!response.ok) throw new Error('/dog error');
           const doggies = await response.json();
 
+
+          this.dogs = list;
         } catch (err) {
           console.error(err);
         }
