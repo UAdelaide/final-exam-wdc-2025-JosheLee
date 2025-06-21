@@ -78,7 +78,7 @@
           const {message: images} = await imgResponse.json();
 
           this.dogs = doggies.map((dog, i) => ({
-            const copy = Object.assign({}, dog);
+            const copy = Object.assign({}, dogs);
             copy.photourl = images[i];
             return copy;
           }))
