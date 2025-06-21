@@ -79,7 +79,8 @@
 
           this.dogs = doggies.map((dog, i) => ({
             const copy = Object.assign({}, dog);
-            copy.photo
+            copy.photourl = images[i];
+            return copy;
           }))
 
           this.dogs = doggies;
