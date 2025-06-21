@@ -63,10 +63,11 @@
           dogs: []
         };
       },
-      async mounted(){
-        try{
+      async mounted() {
+        try {
           const response = await fetch('/api/users/api/dogs');
           if (!response.ok) throw new Error('/dog error');
+          const doggies = await response.json();
 
         } catch (err) {
           console.error(err);
