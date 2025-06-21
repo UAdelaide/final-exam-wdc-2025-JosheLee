@@ -67,10 +67,13 @@
       },
       async mounted() {
         try {
+          // dogs
           const response = await fetch('/api/users/api/dogs');
           if (!response.ok) throw new Error('/dog error');
           const doggies = await response.json();
 
+          // random dog img
+          const imgResponse
 
           this.dogs = doggies;
         } catch (err) {
