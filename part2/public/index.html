@@ -73,7 +73,7 @@
           const doggies = await response.json();
 
           // random dog img
-          const imgResponse
+          const imgResponse = await fetch('https://dog.ceo/api/breeds/image/random');
 
           this.dogs = doggies;
         } catch (err) {
