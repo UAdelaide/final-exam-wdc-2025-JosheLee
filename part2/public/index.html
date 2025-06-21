@@ -50,7 +50,7 @@
           <td>{{ dog.size}}</td>
           <td>{{ dog.owner_id }}</td>
           <td>
-            <img v-if="">
+            <img v-if="dog.photo">
           </td>
         </tr>
       </tbody>
@@ -81,7 +81,7 @@
 
           this.dogs = doggies.map((dog, i) => {
             const copy = Object.assign({}, dog);
-            copy.photourl = images[i];
+            copy.photo = images[i];
             return copy;
           });
 
