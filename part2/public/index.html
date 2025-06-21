@@ -75,7 +75,9 @@
           // random dog img
           const imgResponse = await fetch('https://dog.ceo/api/breeds/image/random');
           if (!imgResponse.ok) throw new Error('api error');
-          const {message: images} = await imgResponse
+          const {message: images} = await imgResponse.json();
+
+          this.dogs = doggies.map(())
 
           this.dogs = doggies;
         } catch (err) {
