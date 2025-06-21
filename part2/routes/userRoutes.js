@@ -98,7 +98,7 @@ router.get('/dogs', async (req, res) => {
 });
 
 // Return a list of all dogs with their size and owner's username
-router.get('/api/dogs', async (req, res) => {
+router.get('/dogs', async (req, res) => {
   try {
     const [rows] = await db.query(`
       SELECT
