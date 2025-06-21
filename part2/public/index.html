@@ -65,7 +65,7 @@
       },
       async mounted(){
         try{
-          const response = await fetch('/api/users/dogs');
+          const response = await fetch('/api/users/api/dogs');
           if (!response.ok) throw new Error('/dog error');
 
         } catch (err) {
