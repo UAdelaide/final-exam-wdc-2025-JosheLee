@@ -75,13 +75,13 @@
           // random dog img
           const imgResponse = await fetch('https://dog.ceo/api/breeds/image/random');
           if (!imgResponse.ok) throw new Error('api error');
-          const {message: images} = await imgResponse.json();
+          const { message: images } = await imgResponse.json();
 
-          this.dogs = doggies.map((dog, i) => ({
+          this.dogs = doggies.map((dog, i) => {
             const copy = Object.assign({}, dogs);
             copy.photourl = images[i];
             return copy;
-          }));
+          });
 
           this.dogs = doggies;
         } catch (err) {
