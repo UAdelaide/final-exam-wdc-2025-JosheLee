@@ -102,11 +102,11 @@ router.get('/api/dogs', async (req, res) => {
   try {
     const [rows] = await db.query(`
       SELECT
-        d.dog_id
-        d.name
-        d.size
+        dog_id
+        name
+        size
         d.owner_id
-      FROM Dogs d
+      FROM Dogs
     `);
 
     return res.json(rows);
