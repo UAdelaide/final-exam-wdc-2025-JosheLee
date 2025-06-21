@@ -79,12 +79,13 @@
           if (!imgResponse.ok) throw new Error('api error');
           const { message: images } = await imgResponse.json();
 
-          console.
           this.dogs = doggies.map((dog, i) => {
             const copy = Object.assign({}, dog);
             copy.photo = images[i];
             return copy;
           });
+
+          console.log(this.dogs);
 
         } catch (err) {
           console.error(err);
